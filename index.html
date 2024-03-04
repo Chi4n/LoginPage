@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LoginPage</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="bg.png" />
+
+      <form id="mainForm" novalidate>
+        <h2>JavaScript from Valiator</h2>
+
+        <div class="form-control">
+          <label for="name"> Name </label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            autocomplete="off"
+          />
+          <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+          <label for="email"> Enter your Email </label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            autocomplete="off"
+          />
+          <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+          <label for="phone"> Enter your phone </label>
+          <input
+            type="tel"
+            id="phone"
+            placeholder="Enter your phone"
+            autocomplete="off"
+          />
+          <i class="icon"></i>
+        </div>
+        <div class="form-control">
+          <label for="password"> Password </label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            autocomplete="off"
+          />
+          <i class="icon"></i>
+        </div>
+
+        <div class="form-control">
+          <label for="message"> Message </label>
+          <textarea id="message" placeholder="Enter your message"></textarea>
+          <i class="icon"></i>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+    
+    <div id="successModal" class="modal">
+      <div class="modal-content">
+        <span class="content-button">&times;</span>
+        <h2>Success!</h2>
+        <p>Your form has been submitted success</p>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
