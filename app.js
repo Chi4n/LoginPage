@@ -1,10 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("mainForm");
-  const name = document.getElementById("name").focus();
+  const name = document.getElementById("name");
   const email = document.getElementById("email");
   const phone = document.getElementById("phone");
   const password = document.getElementById("password");
   const message = document.getElementById("message");
+
+  name.focus()
+  document.querySelector("input").addEventListener("input", function (){
+    let valor = this.value;
+    if (valor.length > 0) {
+      this.value = valor.charAt(0).toUpperCase() + valor.slice(1).toLowerCase();
+    }
+  });
+  
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -15,6 +24,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   name.addEventListener("input", () => {
     validateField(name, name.value.trim() !== "", "Name cannot be blank");
+    
+    
   });
 
   email.addEventListener("input", () => {
@@ -64,7 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function validateField(input, condition, errorMessage) {
     if (condition) {
-      setSuccess(input);
+      setSuccess(input)
+  
     } else {
       setError(input, errorMessage);
     }

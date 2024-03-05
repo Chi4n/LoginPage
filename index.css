@@ -125,7 +125,7 @@ button:hover:before,button:hover:after{
 .form-control.error .icon,
 .form-control.error input::placeholder,
 .form-control.error textarea::placeholder {
-  color: #e407076b;
+  color: #e4070778;
 }
 
 .modal {
@@ -137,20 +137,24 @@ button:hover:before,button:hover:after{
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgb(0,0,0,0.4);
+  background:linear-gradient( #5b7bb391,#435d9091,#3d4e7891 );
+  
+  
 }
 .modal-content{
-  background-color: #fefefe;
+  background-color: #fcfdffe5;
   margin: 15% auto ;
   padding: 20px;
   width: 80%;
-  border: 1px solid #888;
+  border: 3px solid #799ee2;
   max-width: 500px;
   border-radius: 10px;
   text-align: center;
+
+  
 }
 .close-button{
-  color: #888;
+  color: #9a99c5;
   float: right;
   font-size: 28px;
   font-weight: bold;
