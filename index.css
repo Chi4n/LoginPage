@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  color: #3D4E78;
 }
 
 body {
-  background-color: #cdcdcd;
+  background-color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -15,18 +17,18 @@ body {
 .container {
   display: flex;
   gap: 20px;
-  background-color: #fff;
+  background-color: #ffffffa1;
   width: 100%;
   max-width: 920px;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 10px 30px #809ED0;
 }
 .container img {
   width: 50%;
   border-radius: 20px;
   object-fit: cover;
-  background-color: aqua;
+  background-color: rgba(0, 255, 255, 0.353);
 }
 
 .container form {
@@ -35,6 +37,7 @@ body {
 form h2 {
   text-align: center;
   margin-bottom: 20px;
+  font-size: 35px;
 }
 .form-control {
   position: relative;
@@ -43,34 +46,124 @@ form h2 {
 .form-control label {
   display: block;
   margin-bottom: 5px;
+  font-size: 17px;
 }
 .form-control input,
 .form-control textarea {
   width: 100%;
   padding: 10px;
   padding-right: 40px;
-  border: 2px solid #ddd;
+  border: 2px solid #dddddd8e;
   border-radius: 10px;
   outline: none;
+  
 }
-button {
+.form-control input::placeholder{
+  color: #7977778e;
+}
+
+button{
+  background:linear-gradient( #ECD7E6,#B8BDE3,#809ED0 );
   width: 100%;
   border: none;
+  position: relative;
   padding: 10px;
-  background-color: #0b0f64;
-  color: #fff;
+  color: #3D4E78;
   border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition:500ms ease all;
+  outline:none;
 }
-button:hover {
-  background-color: rgb(85, 85, 221);
+button:hover{
+  background:linear-gradient( #5B7CB3,#435D90,#3D4E78 );
+  color:#ffffff;
+
 }
-.modal {
-  display: none;
+button:before,button:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px;
+  width:0;
+  background: #ffffffb8;
+  transition:1s ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+  transition:1s ease all;
 }
 
+.form-control .icon {
+  position: absolute;
+  right: 10px;
+  top: 60%;
+  transform: translateY(-50);
+  font-size: 20px;
+  color: transparent;
+  pointer-events: none;
+}
+
+.form-control.success input,
+.form-control.success textarea {
+  border-color: #04b31e80;
+}
+.form-control.success .icon {
+  color: #04b31ed4;
+}
+.form-control.error input,
+.form-control.error textarea {
+  border-color: #e407072e;
+}
+.form-control.error .icon,
+.form-control.error input::placeholder,
+.form-control.error textarea::placeholder {
+  color: #e407076b;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0,0.4);
+}
+.modal-content{
+  background-color: #fefefe;
+  margin: 15% auto ;
+  padding: 20px;
+  width: 80%;
+  border: 1px solid #888;
+  max-width: 500px;
+  border-radius: 10px;
+  text-align: center;
+}
+.close-button{
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+
+}
+
+.close-button:hover,
+.close-button:focus{
+  color:#000 ;
+  text-decoration: none;
+  cursor: pointer;
+}
 @media screen and (max-width: 920px) {
   .container img {
     display: none;
