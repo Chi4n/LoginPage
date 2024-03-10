@@ -32,21 +32,23 @@ body {
 }
 
 .container form {
+  background-color: #3d4e7800;
   width: 50%;
 }
 form h2 {
   text-align: center;
-  margin-bottom: 20px;
+  padding-bottom: 45px;
   font-size: 35px;
 }
 .form-control {
   position: relative;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .form-control label {
   display: block;
   margin-bottom: 5px;
   font-size: 17px;
+  
 }
 .form-control input,
 .form-control textarea {
